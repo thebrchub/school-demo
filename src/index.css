@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  /* This tells Tailwind to use Plus Jakarta Sans anywhere you use font-sans */
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* Base HTML styles */
+html {
+  scroll-behavior: smooth;
+  /* Firefox scrollbar support */
+  scrollbar-width: thin;
+  scrollbar-color: #94a3b8 #f8fafc; 
+}
+
+/* ==========================================
+   Custom Webkit Scrollbar (Chrome, Safari, Edge)
+   ========================================== */
+
+/* Width of the entire scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* The track (background) */
+::-webkit-scrollbar-track {
+  background: #f8fafc; /* tailwind slate-50 */
+}
+
+/* The draggable thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1; /* tailwind slate-300 */
+  border-radius: 20px;
+  /* Creating a floating pill effect using a transparent border */
+  border: 3px solid #f8fafc; 
+}
+
+/* Thumb hover state (Matches our premium blue theme) */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #2563eb; /* tailwind blue-600 */
+}
