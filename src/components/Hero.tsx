@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { ArrowRight, PlayCircle, Award, BookOpen, CalendarClock } from 'lucide-react';
 
 const Hero = () => {
