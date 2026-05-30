@@ -2,14 +2,33 @@ import { Users, Quote } from 'lucide-react';
 
 const Faculty = () => {
   const staff = [
-    { name: 'Dr. A. Sharma', subject: 'Mathematics', exp: '15 Years', initial: 'S' },
-    { name: 'Mrs. V. Reddy', subject: 'Science & Biology', exp: '12 Years', initial: 'R' },
-    { name: 'Mr. K. Rao', subject: 'English Literature', exp: '10 Years', initial: 'R' },
-    { name: 'Ms. P. Naidu', subject: 'Social Studies', exp: '8 Years', initial: 'N' },
+    { 
+      name: 'Dr. James Carter', 
+      subject: 'Mathematics', 
+      exp: '15 Years', 
+      image: '/faculty/1.jpg' 
+    },
+    { 
+      name: 'Mrs. Sarah Jenkins', 
+      subject: 'Science & Biology', 
+      exp: '12 Years', 
+      image: '/faculty/2.jpg' 
+    },
+    { 
+      name: 'Mr. David Mitchell', 
+      subject: 'English Literature', 
+      exp: '10 Years', 
+      image: '/faculty/3.jpg' 
+    },
+    { 
+      name: 'Ms. Emily Brooks', 
+      subject: 'Social Studies', 
+      exp: '8 Years', 
+      image: '/faculty/4.jpg' 
+    },
   ];
 
   return (
-    // ADJUSTED: Reduced top/bottom padding from py-32 to py-20 for desktop
     <section id="faculty" className="py-16 lg:py-20 bg-white relative overflow-hidden">
       
       {/* Subtle Background Pattern */}
@@ -18,7 +37,6 @@ const Faculty = () => {
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        {/* ADJUSTED: Reduced margin-bottom from mb-20 to mb-12 */}
         <div className="text-center max-w-3xl mx-auto mb-10 lg:mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-blue-800 text-sm font-bold uppercase tracking-widest mb-6 shadow-sm">
             <Users className="w-4 h-4 text-blue-600" />
@@ -48,7 +66,7 @@ const Faculty = () => {
           <div className="relative w-40 h-40 md:w-56 md:h-56 shrink-0 rounded-full overflow-hidden border-4 border-blue-400/30 shadow-inner group-hover:scale-[1.02] transition-transform duration-500 z-10">
             <img 
               src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop" 
-              alt="C. Sreekumaran" 
+              alt="Dr. Robert Sterling" 
               className="w-full h-full object-cover"
             />
           </div>
@@ -62,10 +80,10 @@ const Faculty = () => {
               Principal's Desk
             </div>
             
-            <h4 className="text-3xl md:text-4xl font-extrabold text-white mb-5 tracking-tight">C. Sreekumaran</h4>
+            <h4 className="text-3xl md:text-4xl font-extrabold text-white mb-5 tracking-tight">Dr. Robert Sterling</h4>
             
             <p className="text-blue-100 text-lg md:text-xl italic leading-relaxed font-light mb-8 max-w-2xl">
-              "Education is not the learning of facts, but the training of the mind to think. At Priya Cement High School, we focus on empowering every student to discover their true potential and lead with integrity."
+              "Education is not the learning of facts, but the training of the mind to think. At Westbridge International School, we focus on empowering every student to discover their true potential and lead with integrity."
             </p>
 
             {/* Visual Anchor Line */}
@@ -83,9 +101,13 @@ const Faculty = () => {
               {/* Subtle top accent line on hover */}
               <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-transparent via-amber-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-              {/* Premium Monogram Avatar */}
-              <div className="w-24 h-24 mx-auto bg-slate-50 border-2 border-slate-100 group-hover:border-amber-200 rounded-full mb-6 flex items-center justify-center text-blue-900 font-black text-3xl shadow-inner transition-colors duration-500">
-                {member.initial}
+              {/* Premium Image Avatar */}
+              <div className="w-24 h-24 mx-auto rounded-full mb-6 overflow-hidden border-4 border-slate-50 group-hover:border-amber-200 shadow-md transition-colors duration-500">
+                <img 
+                  src={member.image} 
+                  alt={member.name}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
               </div>
               
               <h5 className="text-xl font-bold text-slate-900 mb-2 tracking-tight group-hover:text-blue-900 transition-colors duration-300">

@@ -1,4 +1,3 @@
-
 import { ArrowRight, PlayCircle, Award, BookOpen, CalendarClock } from 'lucide-react';
 
 const Hero = () => {
@@ -34,7 +33,8 @@ const Hero = () => {
             
             {/* Subtext */}
             <p className="text-lg sm:text-xl text-slate-600 mb-10 leading-relaxed font-medium">
-              Priya Cement High School empowers students in Sreepuram through rigorous academics, unshakeable values, and holistic observation-based learning.
+              {/* FIXED: Updated location to London */}
+              Westbridge International School empowers students in London through rigorous academics, unshakeable values, and holistic observation-based learning.
             </p>
             
             {/* Call to Actions */}
@@ -54,7 +54,8 @@ const Hero = () => {
               <div className="flex items-center gap-3">
                 <div className="bg-blue-100 p-2.5 rounded-lg text-blue-800"><BookOpen className="w-5 h-5" /></div>
                 <div className="text-left">
-                  <span className="block text-slate-900 font-bold text-lg leading-none mb-1">State Board</span>
+                  {/* FIXED: Changed State Board to IB Curriculum */}
+                  <span className="block text-slate-900 font-bold text-lg leading-none mb-1">IB Program</span>
                   <span className="text-sm font-medium text-slate-500">Curriculum</span>
                 </div>
               </div>
@@ -106,7 +107,8 @@ const Hero = () => {
                     <Award className="w-6 h-6 text-blue-900" />
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">Excellence Award</h3>
-                  <p className="text-blue-200 text-sm sm:text-base font-medium">Recognized for holistic education in Boincheruvupalli.</p>
+                  {/* FIXED: Changed Boincheruvupalli to Kensington */}
+                  <p className="text-blue-200 text-sm sm:text-base font-medium">Recognized for holistic education in Kensington.</p>
                 </div>
               </div>
 

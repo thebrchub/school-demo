@@ -1,5 +1,5 @@
-import  { useState, useEffect } from 'react';
-import { Menu, X, GraduationCap, ArrowRight } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Menu, X, ArrowRight } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,14 +28,12 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           
           {/* Logo Section */}
-          <a href="#home" className="flex items-center gap-3 group">
-            <div className="bg-blue-900 p-2.5 rounded-xl shadow-sm group-hover:scale-105 transition-transform duration-300">
-              <GraduationCap className="h-6 w-6 text-white" />
-            </div>
-            <div>
-              <h1 className="text-xl lg:text-2xl font-extrabold text-blue-900 leading-tight tracking-tight">Priya Cement</h1>
-              <p className="text-[0.65rem] text-slate-500 font-bold tracking-widest uppercase">High School</p>
-            </div>
+          <a href="#home" className="flex items-center group">
+            <img 
+              src="/logo.svg" 
+              alt="Westbridge International School" 
+              className="h-10 lg:h-18 w-auto group-hover:scale-105 transition-transform duration-300" 
+            />
           </a>
 
           {/* Desktop Menu */}

@@ -59,7 +59,7 @@ const Gallery = () => {
           </h2>
           
           <p className="text-slate-600 text-lg sm:text-xl font-medium leading-relaxed">
-            A glimpse into the vibrant daily life, celebrations, and learning environments at Priya Cement High School.
+            A glimpse into the vibrant daily life, celebrations, and learning environments at Westbridge International School.
           </p>
         </div>
 

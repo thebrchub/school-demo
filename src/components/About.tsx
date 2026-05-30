@@ -1,4 +1,3 @@
-
 import { Target, Shield, MapPin, CheckCircle2 } from 'lucide-react';
 
 const About = () => {
@@ -56,7 +55,8 @@ const About = () => {
             </h2>
             
             <p className="text-slate-600 mb-10 text-lg sm:text-xl leading-relaxed font-medium">
-              Located in the serene environment of Sreepuram, Boincheruvupalli, Priya Cement High School is committed to providing a holistic education. We believe in nurturing not just intellect, but character.
+              {/* FIXED: Updated Location and School Name */}
+              Located in the historic and serene district of Kensington, London, Westbridge International School is committed to providing a holistic, world-class education. We believe in nurturing not just intellect, but character.
             </p>
 
             {/* Feature List */}
@@ -69,7 +69,8 @@ const About = () => {
                 </div>
                 <div>
                   <h4 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-900 transition-colors">Academic Excellence</h4>
-                  <p className="text-slate-600 leading-relaxed">A rigorous state-board curriculum designed to challenge students and prepare them for future global opportunities.</p>
+                  {/* FIXED: Changed to IB Curriculum */}
+                  <p className="text-slate-600 leading-relaxed">A rigorous International Baccalaureate (IB) curriculum designed to challenge students and prepare them for elite global universities.</p>
                 </div>
               </div>
 
@@ -91,7 +92,8 @@ const About = () => {
                 </div>
                 <div>
                   <h4 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-900 transition-colors">Location Advantage</h4>
-                  <p className="text-slate-600 leading-relaxed">A peaceful, distraction-free campus in Andhra Pradesh equipped with modern amenities for focused learning.</p>
+                  {/* FIXED: Updated Campus Location */}
+                  <p className="text-slate-600 leading-relaxed">A secure, distraction-free campus in the heart of London, equipped with state-of-the-art modern amenities for focused learning.</p>
                 </div>
               </div>
 

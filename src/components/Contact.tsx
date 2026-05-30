@@ -45,9 +45,10 @@ const Contact = () => {
                 <div>
                   <h4 className="text-lg font-bold text-slate-900 mb-1 group-hover:text-blue-900 transition-colors">Campus Address</h4>
                   <p className="text-slate-600 leading-relaxed font-medium">
-                    Priya Cement High School,<br />
-                    Sreepuram, Boincheruvupalli,<br />
-                    Andhra Pradesh
+                    {/* FIXED: Updated to a prestigious international address */}
+                    Westbridge International School,<br />
+                    142 Westbridge Manor, Kensington,<br />
+                    London W8 5TT, United Kingdom
                   </p>
                 </div>
               </div>
@@ -59,7 +60,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-bold text-slate-900 mb-1 group-hover:text-blue-900 transition-colors">Phone</h4>
-                  <p className="text-slate-600 font-medium">7815957459</p>
+                  {/* FIXED: Updated to an international UK format */}
+                  <p className="text-slate-600 font-medium">+44 20 7946 0123</p>
                 </div>
               </div>
 
@@ -70,8 +72,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-bold text-slate-900 mb-1 group-hover:text-blue-900 transition-colors">Email</h4>
-                  <a href="mailto:priyacemenths@gmail.com" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
-                    priyacemenths@gmail.com
+                  <a href="mailto:admissions@westbridge.edu" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+                    admissions@westbridge.edu
                   </a>
                 </div>
               </div>
@@ -105,7 +107,7 @@ const Contact = () => {
                     <label className="block text-sm font-bold text-slate-700 mb-2 ml-1">Phone Number</label>
                     <input 
                       type="tel" 
-                      placeholder="+91 98765 43210" 
+                      placeholder="+44 20 7946 0123" 
                       className="w-full px-5 py-4 bg-slate-50 text-slate-900 rounded-xl border border-slate-200 focus:bg-white focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all placeholder:text-slate-400 font-medium"
                     />
                   </div>

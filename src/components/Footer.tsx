@@ -1,5 +1,4 @@
-import { GraduationCap, MapPin, Phone, Mail, ChevronRight } from 'lucide-react';
-import { FaFacebook, FaXTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa6';
+import { MapPin, Phone, Mail, ChevronRight } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -12,85 +11,77 @@ const Footer = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
           
-          {/* Brand Column (Takes up more space) */}
-          <div className="lg:col-span-4 pr-0 lg:pr-8">
-            <a href="#home" className="flex items-center gap-3 group mb-6 inline-flex">
-              <div className="bg-blue-600 p-2.5 rounded-xl shadow-sm group-hover:scale-105 transition-transform duration-300">
-                <GraduationCap className="h-6 w-6 text-white" />
-              </div>
-              <div>
-                <h2 className="text-2xl font-extrabold text-white leading-tight tracking-tight">Priya Cement</h2>
-                <p className="text-[0.65rem] text-amber-400 font-bold tracking-widest uppercase">High School</p>
-              </div>
+          {/* Brand Column */}
+          <div className="md:col-span-2 lg:col-span-4 pr-0 lg:pr-8">
+            <a href="#home" className="inline-block mb-8 group">
+              <img 
+                src="/logo.svg" 
+                alt="Westbridge International School" 
+                className="h-10 lg:h-28 w-auto group-hover:scale-105 transition-transform duration-300 brightness-0 invert opacity-90 group-hover:opacity-100" 
+              />
             </a>
             
             <p className="text-slate-400 text-base leading-relaxed mb-8 font-medium">
               Shaping future generations through academic excellence, unshakeable values, and observation-based learning. Building tomorrow's leaders, today.
             </p>
+          </div>
+
+          {/* Wrapper Grid to force Side-by-Side on Mobile */}
+          {/* FIXED: Added lg:mt-8 to push this down on desktop to align with the left column */}
+          <div className="grid grid-cols-2 gap-8 lg:col-span-4 lg:col-start-6 lg:mt-8">
             
-            {/* Elevated Social Icons */}
-            <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white hover:border-blue-500 hover:-translate-y-1 transition-all duration-300 shadow-sm">
-                <FaFacebook className="h-4 w-4" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:bg-slate-800 hover:text-white hover:border-slate-700 hover:-translate-y-1 transition-all duration-300 shadow-sm">
-                <FaXTwitter className="h-4 w-4" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:bg-pink-600 hover:text-white hover:border-pink-500 hover:-translate-y-1 transition-all duration-300 shadow-sm">
-                <FaInstagram className="h-4 w-4" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:bg-blue-700 hover:text-white hover:border-blue-600 hover:-translate-y-1 transition-all duration-300 shadow-sm">
-                <FaLinkedin className="h-4 w-4" />
-              </a>
+            {/* Quick Links */}
+            <div>
+              <h3 className="text-white font-bold text-lg mb-6 tracking-tight">Quick Links</h3>
+              <ul className="space-y-4">
+                {['Home', 'About Us', 'Achievements', 'Gallery'].map((link) => (
+                  <li key={link}>
+                    <a href={`#${link.toLowerCase().replace(' ', '')}`} className="group flex items-center text-slate-400 hover:text-amber-400 transition-colors font-medium text-sm">
+                      <ChevronRight className="h-4 w-4 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-amber-500" />
+                      <span className="transform group-hover:translate-x-1 transition-transform duration-300">{link}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
 
-          {/* Quick Links */}
-          <div className="lg:col-span-2 lg:col-start-6">
-            <h3 className="text-white font-bold text-lg mb-6 tracking-tight">Quick Links</h3>
-            <ul className="space-y-4">
-              {['Home', 'About Us', 'Achievements', 'Gallery'].map((link) => (
-                <li key={link}>
-                  <a href={`#${link.toLowerCase().replace(' ', '')}`} className="group flex items-center text-slate-400 hover:text-amber-400 transition-colors font-medium text-sm">
-                    <ChevronRight className="h-4 w-4 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-amber-500" />
-                    <span className="transform group-hover:translate-x-1 transition-transform duration-300">{link}</span>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Academics */}
-          <div className="lg:col-span-2">
-            <h3 className="text-white font-bold text-lg mb-6 tracking-tight">Academics</h3>
-            <ul className="space-y-4">
-              {['Infrastructure', 'Our Faculty', 'Admissions', 'Curriculum'].map((link) => (
-                <li key={link}>
-                  <a href={`#${link.toLowerCase().replace(' ', '')}`} className="group flex items-center text-slate-400 hover:text-amber-400 transition-colors font-medium text-sm">
-                    <ChevronRight className="h-4 w-4 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-amber-500" />
-                    <span className="transform group-hover:translate-x-1 transition-transform duration-300">{link}</span>
-                  </a>
-                </li>
-              ))}
-            </ul>
+            {/* Academics */}
+            <div>
+              <h3 className="text-white font-bold text-lg mb-6 tracking-tight">Academics</h3>
+              <ul className="space-y-4">
+                {['Infrastructure', 'Our Faculty', 'Admissions', 'Curriculum'].map((link) => (
+                  <li key={link}>
+                    <a href={`#${link.toLowerCase().replace(' ', '')}`} className="group flex items-center text-slate-400 hover:text-amber-400 transition-colors font-medium text-sm">
+                      <ChevronRight className="h-4 w-4 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-amber-500" />
+                      <span className="transform group-hover:translate-x-1 transition-transform duration-300">{link}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
           </div>
 
           {/* Contact Information */}
-          <div className="lg:col-span-3">
+          {/* FIXED: Added lg:mt-8 to align with the middle block on desktop */}
+          <div className="lg:col-span-3 lg:mt-8">
             <h3 className="text-white font-bold text-lg mb-6 tracking-tight">Contact Us</h3>
             <ul className="space-y-5 text-sm font-medium text-slate-400">
               <li className="flex items-start gap-3 group">
                 <MapPin className="h-5 w-5 text-blue-500 shrink-0 group-hover:text-amber-400 transition-colors" />
-                <span className="leading-relaxed">Sreepuram, Boincheruvupalli,<br />Andhra Pradesh</span>
+                <span className="leading-relaxed">
+                  142 Westbridge Manor, Kensington,<br />
+                  London W8 5TT, United Kingdom
+                </span>
               </li>
               <li className="flex items-center gap-3 group">
                 <Phone className="h-5 w-5 text-blue-500 shrink-0 group-hover:text-amber-400 transition-colors" />
-                <span className="text-white group-hover:text-amber-400 transition-colors">7815957459</span>
+                <span className="text-white group-hover:text-amber-400 transition-colors">+44 20 7946 0123</span>
               </li>
               <li className="flex items-center gap-3 group">
                 <Mail className="h-5 w-5 text-blue-500 shrink-0 group-hover:text-amber-400 transition-colors" />
-                <a href="mailto:priyacemenths@gmail.com" className="hover:text-amber-400 transition-colors">
-                  priyacemenths@gmail.com
+                <a href="mailto:admissions@westbridge.edu" className="hover:text-amber-400 transition-colors break-all">
+                  admissions@westbridge.edu
                 </a>
               </li>
             </ul>
@@ -100,10 +91,16 @@ const Footer = () => {
 
         {/* Bottom Copyright Bar */}
         <div className="pt-8 border-t border-white/10 text-sm flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 font-medium">
-          <p>© {new Date().getFullYear()} Priya Cement High School. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Westbridge International School. All rights reserved.</p>
+          
+          {/* FIXED: Replaced default links with Agency Credit */}
           <div className="flex gap-6">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+            <p>
+              Designed and developed by  {'  '}
+              <a href="https://www.brchub.tech" target="_blank" rel="noopener noreferrer" className="text-white hover:text-amber-400 font-bold transition-colors">
+  BRC HUB LLP
+</a>
+            </p>
           </div>
         </div>
 
